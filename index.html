@@ -874,7 +874,7 @@
                     height="70px" width="110px" />
                 <br>
                 <br>
-                <center><audio controls autoplay loop>
+                <center><audio id="my_audio" controls autoplay loop>
                         <source src="./song.mp3" type="audio/mpeg">
                         <!-- <source src="./small.mp3" type="audio/mpeg">  -->
                     </audio></center><br>
@@ -944,6 +944,10 @@
                 <!----Countdown time Setting ---->
                 <script>
                     // Set the date we're counting down to
+                    window.onload = function () {
+                        document.getElementById("my_audio").play();
+                    }
+
                     var countDownDate = new Date("10oct , 2018 00:00:00").getTime();
 
                     // Update the count down every 01 second
